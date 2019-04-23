@@ -51,6 +51,31 @@
 			path = GyroscopeBallController;
 			sourceTree = "<group>";
 		};
+		D93B5861226F2FB000075035 /* GyroscopeBallView */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB8601226EFBFA00C15962 /* Main.storyboard */,
+			);
+			path = GyroscopeBallView;
+			sourceTree = "<group>";
+		};
+		D93B5862226F2FC400075035 /* GyroscopeBallHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB8604226EFBFB00C15962 /* Assets.xcassets */,
+				D9CB8609226EFBFB00C15962 /* Info.plist */,
+			);
+			path = GyroscopeBallHelpers;
+			sourceTree = "<group>";
+		};
+		D93B5863226F2FE100075035 /* GyroscopeBallAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB85FD226EFBFA00C15962 /* AppDelegate.swift */,
+			);
+			path = GyroscopeBallAppDelegate;
+			sourceTree = "<group>";
+		};
 		D9CB85F1226EFBFA00C15962 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +95,11 @@
 		D9CB85FC226EFBFA00C15962 /* GyroscopeBall */ = {
 			isa = PBXGroup;
 			children = (
-				D9CB85FD226EFBFA00C15962 /* AppDelegate.swift */,
+				D93B5863226F2FE100075035 /* GyroscopeBallAppDelegate */,
 				D93B5860226F2EB900075035 /* GyroscopeBallController */,
 				D93B585F226F2EAE00075035 /* GyroscopeBallModel */,
-				D9CB8601226EFBFA00C15962 /* Main.storyboard */,
-				D9CB8604226EFBFB00C15962 /* Assets.xcassets */,
-				D9CB8609226EFBFB00C15962 /* Info.plist */,
+				D93B5861226F2FB000075035 /* GyroscopeBallView */,
+				D93B5862226F2FC400075035 /* GyroscopeBallHelpers */,
 			);
 			path = GyroscopeBall;
 			sourceTree = "<group>";

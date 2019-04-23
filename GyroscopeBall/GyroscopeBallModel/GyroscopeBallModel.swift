@@ -11,7 +11,7 @@ import Foundation
 struct Model {
     
     static var ball = Model()
-
+    
     var destX = 0.0
     var destY = 0.0
     
