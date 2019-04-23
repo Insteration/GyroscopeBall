@@ -16,19 +16,14 @@ class ViewController: UIViewController {
     var motionManager = CMMotionManager()
     var timer = Timer()
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
+    fileprivate func motionManagerAccelerometerMethod() {
         if motionManager.isAccelerometerAvailable {
             
             motionManager.accelerometerUpdateInterval = 0.01
             
             motionManager.startAccelerometerUpdates(to: .main) { (data, error) in
                 guard let data = data, error == nil else { return }
-                
-                
-                
+
                 let currentX = (Double(self.view.frame.size.width) / 2)
                 let currentY = (Double(self.view.frame.size.height) / 2)
                 Model.ball.destX = currentX + (data.acceleration.x * 250)
@@ -52,9 +47,9 @@ class ViewController: UIViewController {
                 
                 
                 if Model.ball.destY > (Double(self.view.frame.size.width) - 50) {
-                    if Model.ball.destX < 70 {
-                        Model.ball.destY = 1
-                    }
+                    //                    if Model.ball.destX < 70 {
+                    //                        Model.ball.destY = 1
+                    //                    }
                     
                     if Model.ball.destX > 375 {
                         Model.ball.destY = 0
@@ -73,13 +68,24 @@ class ViewController: UIViewController {
                 }
                 
                 print("y - \(Model.ball.destY)")
-
+                
             }
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        motionManagerAccelerometerMethod()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createLabel()
+        
         createTimer()
     }
     
@@ -94,16 +100,20 @@ class ViewController: UIViewController {
         ball.layer.shadowOffset = CGSize.zero
         ball.layer.shadowRadius = 10
         
+        
+    }
+    
+    private func createLabel() {
         let label = UILabel()
         label.frame = CGRect(x: 13, y:  0, width: 50, height: 50)
         label.text = "B"
         label.font = .systemFont(ofSize: 40)
         label.textColor = .white
-//        label.layer.shadowColor = UIColor.black.cgColor
-//        label.layer.shadowRadius = 0.5
-//        label.layer.shadowOpacity = 0.5
-//        label.layer.shadowOffset = CGSize(width: 1, height: 1)
-//        label.layer.masksToBounds = false
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowRadius = 1
+        label.layer.shadowOpacity = 1
+        label.layer.shadowOffset = CGSize(width: 1, height: 1)
+        label.layer.masksToBounds = false
         ball.addSubview(label)
     }
     
