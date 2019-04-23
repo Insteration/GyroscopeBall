@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gyroscope Ball-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GyroscopeBall" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,20 +21,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-NK-jQO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdI-fT-JQt">
+                                <rect key="frame" x="16" y="35" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PdI-fT-JQt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6gx-dv-65h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PdI-fT-JQt" secondAttribute="trailing" constant="16" id="GbC-hg-wS8"/>
                             <constraint firstItem="Fe4-NK-jQO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="II9-Y9-jFM"/>
+                            <constraint firstItem="PdI-fT-JQt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="bI0-jJ-RQ9"/>
                             <constraint firstItem="Fe4-NK-jQO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dCq-ww-eUF"/>
                             <constraint firstItem="Fe4-NK-jQO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mak-fU-Ue4"/>
                             <constraint firstItem="Fe4-NK-jQO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="s23-xD-g52"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Gyroscope Ball" id="whl-YF-ELz"/>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="PdI-fT-JQt" id="vjo-mX-i6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63.75" y="32.74647887323944"/>
+            <point key="canvasLocation" x="1061.25" y="32.74647887323944"/>
         </scene>
     </scenes>
     <resources>

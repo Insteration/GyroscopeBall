@@ -11,10 +11,12 @@ import CoreMotion
 
 class ViewController: UIViewController {
     
-    var ball = UIView()
+    @IBOutlet weak var coordinatesLabel: UILabel!
     
-    var motionManager = CMMotionManager()
-    var timer = Timer()
+    private let ball = UIView()
+    private let label = UILabel()
+    private var motionManager = CMMotionManager()
+    private var timer = Timer()
     
     fileprivate func motionManagerAccelerometerMethod() {
         if motionManager.isAccelerometerAvailable {
@@ -26,11 +28,9 @@ class ViewController: UIViewController {
 
                 let currentX = (Double(self.view.frame.size.width) / 2)
                 let currentY = (Double(self.view.frame.size.height) / 2)
+                
                 Model.ball.destX = currentX + (data.acceleration.x * 250)
                 Model.ball.destY = currentY - (data.acceleration.y * 250)
-                
-                //                print("y - \(Model.ball.destY)")
-                //                print("Frame is \((Double(self.view.frame.size.width)))")
                 
                 if Model.ball.destX > (Double(self.view.frame.size.width) - 50) {
                     Model.ball.xReverse = -1
@@ -43,15 +43,9 @@ class ViewController: UIViewController {
                 } else {
                     Model.ball.destX -= 1
                 }
-                //                print("x - \(Model.ball.destX)")
-                
                 
                 if Model.ball.destY > (Double(self.view.frame.size.width) - 50) {
-                    //                    if Model.ball.destX < 70 {
-                    //                        Model.ball.destY = 1
-                    //                    }
-                    
-                    if Model.ball.destX > 375 {
+                    if Model.ball.destX > Double(self.view.frame.size.width) {
                         Model.ball.destY = 0
                     }
                     
@@ -67,28 +61,22 @@ class ViewController: UIViewController {
                     Model.ball.destY -= 1
                 }
                 
-                print("y - \(Model.ball.destY)")
-                
+                self.coordinatesLabel.text = "X \(String(format: "%2.2f", Model.ball.destX)) , Y \(String(format: "%2.2f" , Model.ball.destY))"
             }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        
         motionManagerAccelerometerMethod()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createLabel()
-        
         createTimer()
     }
-    
+
     private func createViewBall(x: Double, y: Double) {
         ball.frame = CGRect(x: x, y: y, width: 50, height: 50)
         ball.layer.cornerRadius = 0.5 * ball.bounds.size.width
@@ -99,12 +87,9 @@ class ViewController: UIViewController {
         ball.layer.shadowOpacity = 1
         ball.layer.shadowOffset = CGSize.zero
         ball.layer.shadowRadius = 10
-        
-        
     }
     
     private func createLabel() {
-        let label = UILabel()
         label.frame = CGRect(x: 13, y:  0, width: 50, height: 50)
         label.text = "B"
         label.font = .systemFont(ofSize: 40)
