@@ -14,8 +14,6 @@ struct Model {
 
     var destX = 0.0
     var destY = 0.0
-    var xReverse = 1.0
-    var yReverse = 1.0
     
     init() {}
 }

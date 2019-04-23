@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D9CB85FE226EFBFA00C15962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB85FD226EFBFA00C15962 /* AppDelegate.swift */; };
-		D9CB8600226EFBFA00C15962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB85FF226EFBFA00C15962 /* ViewController.swift */; };
+		D9CB8600226EFBFA00C15962 /* GyroscopeBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB85FF226EFBFA00C15962 /* GyroscopeBallViewController.swift */; };
 		D9CB8603226EFBFA00C15962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CB8601226EFBFA00C15962 /* Main.storyboard */; };
 		D9CB8605226EFBFB00C15962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CB8604226EFBFB00C15962 /* Assets.xcassets */; };
-		D9CB8608226EFBFB00C15962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CB8606226EFBFB00C15962 /* LaunchScreen.storyboard */; };
 		D9CB8610226F036300C15962 /* GyroscopeBallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB860F226F036300C15962 /* GyroscopeBallModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9CB85FA226EFBFA00C15962 /* GyroscopeBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GyroscopeBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CB85FD226EFBFA00C15962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9CB85FF226EFBFA00C15962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9CB85FF226EFBFA00C15962 /* GyroscopeBallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeBallViewController.swift; sourceTree = "<group>"; };
 		D9CB8602226EFBFA00C15962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9CB8604226EFBFB00C15962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D9CB8607226EFBFB00C15962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9CB8609226EFBFB00C15962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9CB860F226F036300C15962 /* GyroscopeBallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroscopeBallModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +35,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D93B585F226F2EAE00075035 /* GyroscopeBallModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB860F226F036300C15962 /* GyroscopeBallModel.swift */,
+			);
+			path = GyroscopeBallModel;
+			sourceTree = "<group>";
+		};
+		D93B5860226F2EB900075035 /* GyroscopeBallController */ = {
+			isa = PBXGroup;
+			children = (
+				D9CB85FF226EFBFA00C15962 /* GyroscopeBallViewController.swift */,
+			);
+			path = GyroscopeBallController;
+			sourceTree = "<group>";
+		};
 		D9CB85F1226EFBFA00C15962 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				D9CB85FD226EFBFA00C15962 /* AppDelegate.swift */,
-				D9CB85FF226EFBFA00C15962 /* ViewController.swift */,
-				D9CB860F226F036300C15962 /* GyroscopeBallModel.swift */,
+				D93B5860226F2EB900075035 /* GyroscopeBallController */,
+				D93B585F226F2EAE00075035 /* GyroscopeBallModel */,
 				D9CB8601226EFBFA00C15962 /* Main.storyboard */,
 				D9CB8604226EFBFB00C15962 /* Assets.xcassets */,
-				D9CB8606226EFBFB00C15962 /* LaunchScreen.storyboard */,
 				D9CB8609226EFBFB00C15962 /* Info.plist */,
 			);
 			path = GyroscopeBall;
@@ -125,7 +138,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9CB8608226EFBFB00C15962 /* LaunchScreen.storyboard in Resources */,
 				D9CB8605226EFBFB00C15962 /* Assets.xcassets in Resources */,
 				D9CB8603226EFBFA00C15962 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9CB8600226EFBFA00C15962 /* ViewController.swift in Sources */,
+				D9CB8600226EFBFA00C15962 /* GyroscopeBallViewController.swift in Sources */,
 				D9CB8610226F036300C15962 /* GyroscopeBallModel.swift in Sources */,
 				D9CB85FE226EFBFA00C15962 /* AppDelegate.swift in Sources */,
 			);
@@ -153,14 +165,6 @@
 				D9CB8602226EFBFA00C15962 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D9CB8606226EFBFB00C15962 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9CB8607226EFBFB00C15962 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
