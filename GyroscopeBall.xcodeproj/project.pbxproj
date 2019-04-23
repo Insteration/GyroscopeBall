@@ -316,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G82CYC7M5V;
-				INFOPLIST_FILE = GyroscopeBall/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GyroscopeBall/GyroscopeBallHelpers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G82CYC7M5V;
-				INFOPLIST_FILE = GyroscopeBall/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GyroscopeBall/GyroscopeBallHelpers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
